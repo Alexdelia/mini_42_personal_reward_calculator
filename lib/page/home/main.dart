@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_42_personal_reward_calculator/page/home/reward.dart';
 import 'package:mini_42_personal_reward_calculator/page/home/xp.dart';
+import 'package:mini_42_personal_reward_calculator/src/rust/api/simple.dart';
 
 class HomePage extends StatefulWidget {
   final void Function(Brightness brightness) toggleTheme;
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: const Text('HomePage'),
+        title: Text(greet(name: 'msloot')),
         // action to change the theme
         actions: <Widget>[
           IconButton(

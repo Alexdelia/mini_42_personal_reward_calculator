@@ -7,4 +7,6 @@ edition = "2021"
 crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
+api42 = { git = "https://github.com/Alexdelia/api42.rs" }
+reqwest = "0.11"
 flutter_rust_bridge = "=2.0.0-dev.22"
