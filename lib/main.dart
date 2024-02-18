@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:mini_42_personal_reward_calculator/page/home/main.dart';
 // import 'package:mini_42_personal_reward_calculator/src/rust/api/simple.dart';
 import 'package:mini_42_personal_reward_calculator/src/rust/frb_generated.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+late SharedPreferences pref;
 
 Future<void> main() async {
   await RustLib.init();
+  pref = await SharedPreferences.getInstance();
+
   runApp(const MyApp());
 }
 
@@ -17,7 +22,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   ThemeMode themeMode = ThemeMode.system;
-
   void toggleTheme(Brightness brightness) {
     setState(() {
       // log the current themeMode

@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int xp = 0;
+  // Option<String> login = pref.getString('login')
 
   @override
   Widget build(BuildContext context) {
